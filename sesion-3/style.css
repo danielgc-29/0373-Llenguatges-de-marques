@@ -1,0 +1,59 @@
+
+:root {
+  /* Colores */
+  --color-brand: rgb(84, 120, 193);
+  --color-on-brand: white;
+  --color-section-bg: rgba(210, 223, 251, 0.8);
+  --color-section-text: rgb(73, 105, 169);
+  --color-hover-bg: rgb(10, 15, 24);
+  --color-hover-text: white;
+  --color-link-active: black;
+
+  /* Tipografía */
+  --font-family: "Roboto", sans-serif;
+  --font-size-base: 1.1rem; /* 1.1 × tamaño por defecto del <html> */
+  --font-size-h3: 1.3rem; /* 1.3 × tamaño por defecto del <html> */
+}
+
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+}
+
+/* Requisito 4 */
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+
+header,
+footer {
+  background-color: var(--color-brand);
+  color: var(--color-on-brand);
+}
+
+section {
+  background-color: var(--color-section-bg);
+  color: var(--color-section-text);
+}
+
+section:first-of-type:hover,
+article:hover {
+  background-color: var(--color-hover-bg);
+  color: var(--color-hover-text);
+}
+
+a:active {
+  color: var(--color-link-active);
+}
+
+
+span {
+  font-weight: bold;
+}
+
+/* <p> hijo directo del último <article> (no los del <div>) */
+article:last-of-type > p {
+  font-style: italic;
+}
