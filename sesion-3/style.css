@@ -45,7 +45,7 @@ section {
   color: var(--color-section-text);
 }
 
-section:first-of-type:hover,
+section:first-child:hover,
 article:hover {
   background-color: var(--color-hover-bg);
   color: var(--color-hover-text);
@@ -59,6 +59,6 @@ span {
   font-weight: bold;
 }
 
-article:last-of-type>p {
+article:last-child>p {
   font-style: italic;
 }
