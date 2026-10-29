@@ -1,0 +1,53 @@
+:root {
+    --primary-color: #dbcf5c;
+}
+
+html {
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    line-height: 1.5;
+    background-color: #f9f6ef;
+    border-top: 4px solid #222;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+section {
+    padding: 2rem 1rem;
+}
+
+section h3 {
+    margin-bottom: 0.5rem;
+}
+
+.parallax {
+    background-image: url('../img/olive-oil_1920.webp');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 20vh;
+}
+
+.parallax:hover {
+    filter: grayscale(100%);
+}
