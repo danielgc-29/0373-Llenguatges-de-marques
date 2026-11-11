@@ -56,3 +56,9 @@ h1 {
     grid-column: span 3;
     grid-row: 3;
 }
+
+.item-4 {
+    grid-column: 3;
+    grid-row: 2;
+    align-self: end;
+}
