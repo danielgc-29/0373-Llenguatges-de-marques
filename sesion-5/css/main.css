@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #EA5D40;
-    --second-color: #FCEEEB;
-    --third-color: #752E20;
-    --fourth-color: #2E120C;
+    --primero-color: #EA5D40;
+    --segundo-color: #FCEEEB;
+    --tercer-color: #752E20;
+    --cuarto-color: #2E120C;
 }
 
 * {
@@ -11,7 +11,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--second-color);
+    background-color: var(--segundo-color);
 }
 
 h2 {
@@ -21,8 +21,8 @@ h2 {
 }
 
 nav {
-    background-color: var(--third-color);
-    color: var(--second-color);
+    background-color: var(--tercer-color);
+    color: var(--segundo-color);
 }
 
 nav#vertical {
@@ -59,7 +59,7 @@ nav#vertical li {
 
 li:hover {
     cursor: pointer;
-    background-color: var(--fourth-color);
+    background-color: var(--cuarto-color);
 }
 
 li#logo {
@@ -67,7 +67,7 @@ li#logo {
 }
 
 li#logo:hover {
-    background-color: var(--third-color);
+    background-color: var(--tercer-color);
 }
 
 a {
