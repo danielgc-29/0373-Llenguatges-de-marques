@@ -2,36 +2,139 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscripción al torneo</title>
+
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/main.css" />
 </head>
 
 <body>
-    <header>
+  <header>
+    <h1>Formulario de inscripción</h1>
+  </header>
 
-    </header>
-    <main>
-        <fieldset>
-            <legend>Formulario de registro</legend>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nameNombre" required>
-            <label for="apellidos">Apellido:</label>
-            <input type="text" id="apellidos" name="nameApellidos" required>
-            <label for="number" id="edad" Name="nameEdad">Edad:</label>
-            <input type="number" id="edad" name="nameEdad" required>
-            <label for="text" id="Nickname" name="nameNickname">Nombre de jugador:</label>
-            <input type="text" id="Nickname" name="nameNickname" required>
-            <label for="contraseña" id="contraseña" name="nameContraseña">Contraseña:</label>
-            <input type="password" id="contraseña" name="nameContraseña" required>
-            <label for="email" id="email" name="nameEmail">Correo electrónico:</label>
-            <input type="email" id="email" name="nameEmail" required>
-        
-        
-        
-        </form>
-    </main>
+  <main>
+    <form id="inscripcion">
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <div class="form-group">
+          <label for="nombre" class="is-required">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana García López" autocomplete="name"
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="correo" class="is-required">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" autocomplete="email"
+            required />
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="edad">Edad (mínimo 16)</label>
+            <input type="number" id="edad" name="edad" min="16" max="120" placeholder="16" />
+          </div>
+
+          <div class="form-group">
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="date" id="nacimiento" name="nacimiento" max="2010-11-12" />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Cuenta de jugador</legend>
+
+        <div class="form-group">
+          <label for="nickname" class="is-required">Nombre del jugador (nickname)</label>
+          <input type="text" id="nickname" name="nickname" minlength="3" maxlength="15"
+            placeholder="Entre 3 y 15 caracteres" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="is-required">Contraseña de la cuenta</label>
+          <input type="password" id="password" name="password" autocomplete="new-password" required />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Torneo</legend>
+
+        <div class="form-group">
+          <label for="videojuego">Videojuego del torneo</label>
+          <select id="videojuego" name="videojuego">
+            <option value="">-- Selecciona un videojuego --</option>
+            <option value="fortnite">Fortnite</option>
+            <option value="valorant">Valorant</option>
+            <option value="lol">League of Legends</option>
+            <option value="cs2">Counter-Strike 2</option>
+            <option value="rocket-league">Rocket League</option>
+            <option value="fc">EA Sports FC</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Plataforma</label>
+          <div class="options">
+            <div>
+              <input type="radio" id="plataforma-pc" name="plataforma" value="pc" checked />
+              <label for="plataforma-pc" class="inline">PC</label>
+            </div>
+            <div>
+              <input type="radio" id="plataforma-ps" name="plataforma" value="playstation" />
+              <label for="plataforma-ps" class="inline">PlayStation</label>
+            </div>
+            <div>
+              <input type="radio" id="plataforma-xbox" name="plataforma" value="xbox" />
+              <label for="plataforma-xbox" class="inline">Xbox</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Disponibilidad horaria</label>
+          <div class="options">
+            <div>
+              <input type="checkbox" id="horario-manana" name="disponibilidad" value="manana" />
+              <label for="horario-manana" class="inline">Mañana</label>
+            </div>
+            <div>
+              <input type="checkbox" id="horario-tarde" name="disponibilidad" value="tarde" />
+              <label for="horario-tarde" class="inline">Tarde</label>
+            </div>
+            <div>
+              <input type="checkbox" id="horario-noche" name="disponibilidad" value="noche" />
+              <label for="horario-noche" class="inline">Noche</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Información adicional</legend>
+
+        <div class="form-group">
+          <label for="comentarios">Comentarios adicionales</label>
+          <textarea id="comentarios" name="comentarios" rows="4" placeholder="Cuéntanos algo más (opcional)"></textarea>
+        </div>
+
+        <div class="form-group">
+          <input type="checkbox" id="normas" name="normas" value="aceptadas" required />
+          <label for="normas" class="inline is-required">
+            He leído y acepto las <a href="normas.html" target="_blank" rel="noopener">normas del torneo</a>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="buttons">
+        <button type="submit" class="btn">Inscribirme</button>
+        <button type="reset" class="btn btn-secondary">Limpiar formulario</button>
+      </div>
+    </form>
+  </main>
 </body>
 
 </html>
